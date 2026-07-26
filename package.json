@@ -1,29 +1,31 @@
 {
-  "name": "n8n-nodes-invoicexpress",
+  "name": "@cookiebytes/n8n-nodes-invoicexpress",
   "version": "0.1.0",
   "description": "n8n community node for the InvoiceXpress API (invoices, estimates, guides, clients, items, taxes, sequences)",
-  "license": "MIT",
-  "homepage": "https://github.com/cookiebytespt/n8n-invoiceXpress",
   "keywords": [
     "n8n-community-node-package",
     "invoicexpress",
     "invoicing",
     "portugal"
   ],
-  "author": {
-    "name": "CookieBytes",
-    "email": "tools@cookiebytes.pt"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cookiebytespt/n8n-invoiceXpress.git"
-  },
+  "homepage": "https://github.com/cookiebytespt/n8n-invoiceXpress",
   "bugs": {
     "url": "https://github.com/cookiebytespt/n8n-invoiceXpress/issues"
   },
-  "engines": {
-    "node": ">=20.15"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cookiebytespt/n8n-invoiceXpress.git"
   },
+  "license": "MIT",
+  "author": {
+    "name": "CookieBytes",
+    "email": "hello@cookiebytes.pt"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "n8n-node build",
     "build:watch": "tsc --watch",
@@ -32,19 +34,6 @@
     "lint:fix": "n8n-node lint --fix",
     "release": "n8n-node release",
     "prepublishOnly": "n8n-node prerelease"
-  },
-  "files": [
-    "dist"
-  ],
-  "n8n": {
-    "n8nNodesApiVersion": 1,
-    "strict": true,
-    "credentials": [
-      "dist/credentials/InvoiceXpressApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/InvoiceXpress/InvoiceXpress.node.js"
-    ]
   },
   "devDependencies": {
     "@n8n/node-cli": "*",
@@ -55,5 +44,18 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/InvoiceXpressApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/InvoiceXpress/InvoiceXpress.node.js"
+    ]
   }
 }
